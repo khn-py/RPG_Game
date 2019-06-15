@@ -17,15 +17,17 @@ def lose_life(life):
     life_module.life -= 100
     return life
 
-name = ''
-print( generator_imienia.add_title(name) + " went to the woods, choose what" + generator_imienia.add_title(name) + " want to do:")
-print("1. Pick the berries to get 1 food")
-print("2. Fight with wolfs to get more 2 foods.")
+def show_woods_story(full_name):
+    name = ''
+    print( generator_imienia.add_title(full_name) + " went to the woods, choose what" + generator_imienia.add_title(full_name) + " want to do:")
+    print("1. Pick the berries to get 1 food")
+    print("2. Fight with wolfs to get more 2 foods.")
 
-with open('woods.txt', 'r') as fopen:
-  lines = fopen.readlines()
+def open_woods():
+    with open('woods.txt', 'r') as fopen:
+        lines = fopen.readlines()
 
-def woods_adventure():
+def woods_adventure(bag, life):
     phrase = int(input("Write 1 or 2: "))
     if phrase == 1:
         print(lines[0])
@@ -38,8 +40,6 @@ def woods_adventure():
         print(lines[3])
         pick_berries(bag)
         return bag
-
     else:
         print("This is not what i expected! Choose 1 or 2")
 
-woods_adventure()
