@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c35c2266-8f0e-4918-bc12-f4baa3df841c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/life_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/life_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woods.py" beforeDir="false" afterPath="$PROJECT_DIR$/woods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/woods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/woods.txt" afterDir="false" />
-    </list>
+    <list default="true" id="c35c2266-8f0e-4918-bc12-f4baa3df841c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +86,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="723" />
     <option name="y" value="148" />
     <option name="width" value="837" />
@@ -173,7 +168,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" sideWeight="0.50177306" side_tool="true" weight="0.2494043" />
