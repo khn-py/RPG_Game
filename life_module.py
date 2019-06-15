@@ -2,7 +2,7 @@
 import math
 import sys
 
-life = int(input())
+life = 100
 
 def show_life():
     rounded = int(math.ceil(life / 10.0))
