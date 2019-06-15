@@ -9,6 +9,6 @@ def fight_with_wolf(bag, life):
     return bag
 
 
-def loose_life(life):
+def lose_life(life):
     "life" -= 100
     return life
