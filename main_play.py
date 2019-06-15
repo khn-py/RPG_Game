@@ -1,5 +1,5 @@
 import generator_imienia as gi
-#import woods
+import woods
 import main_menu as mm
 
 
@@ -22,7 +22,10 @@ bag = {
 def main():
     print("Generate your name:")
     full_name = gi.generate_characters_name()
-    print(mm.main_menu(full_name, bag))
+    life = 100
+    print(mm.menu(full_name, bag))
+    # print(show_woods_story(full_name))
+
 
 
 
