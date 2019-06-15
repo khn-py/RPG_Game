@@ -30,13 +30,15 @@ def woods_adventure():
     if phrase == 1:
         print(lines[0])
         fight_or_run = print(int(input("Do you want to fight (1) or run (2)?")))
-        if fight_or_run == 1:
-            #fight_with_wolf(bag, life)
-        else: print("You are going back to the city")
-            ####go back to the city
+        while fight_or_run == 1:
+            print(lines[2])
+            fight_with_wolf(bag, life)
+            return bag
     elif phrase == 2:
-        print(lines[2])
-        # pick_berries(bag)
+        print(lines[3])
+        pick_berries(bag)
+        return bag
+
     else:
         print("This is not what i expected! Choose 1 or 2")
 

@@ -1,6 +1,7 @@
 import random
 
 
+
 def generate_name(first_letter, name_length, gender):
     string_VOWEL = 'aeiouy'
     string_CONSONANT = "bcdfghjklmnpqrstvwxz"
@@ -36,3 +37,13 @@ def add_title(name):
     title = random.choice(title_list)
     name_with_title = name + " " + number + " " + title
     return name_with_title
+
+
+def generate_characters_name():
+    first_letter = input("choose first letter of the name:")
+    name_length = int(input("choose length of the name:"))
+    gender = input("choose gender m/w/n")
+    name = generate_name(first_letter, name_length, gender)
+    full_name = add_title(name)
+    return full_name
+
