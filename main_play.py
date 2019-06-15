@@ -1,6 +1,7 @@
 import generator_imienia as gi
 import woods
 import main_menu as mm
+#dodać wszystkie moduły, usunąć moduły z modułów, dodać atrybuty funkcji w modułach
 
 
 
@@ -24,7 +25,7 @@ def main():
     full_name = gi.generate_characters_name()
     life = 100
     print(mm.menu(full_name, bag))
-    # print(show_woods_story(full_name))
+    print(show_woods_story(full_name))
 
 
 

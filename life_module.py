@@ -4,29 +4,29 @@ import sys
 
 life = 100
 
-def show_life():
+def show_life(life):
     rounded = int(math.ceil(life / 10.0))
     lost = 10 - rounded
-    return print('[ ' + ('▓ ' * (rounded) + ('░ ' * int(lost)) + ']' + ' ' + str(life) + '%'))
+    print('[ ' + ('▓ ' * (rounded) + ('░ ' * int(lost)) + ']' + ' ' + str(life) + '%'))
 
-def print_low_life():
+def print_low_life(life):
     if life <= 30:
-        return print("You are slowly dying, get some rest at Karczma??")
+        print("You are slowly dying, get some rest at Karczma??")
     else:
         pass
 
-def end_game():
+def end_game(life):
     if life <= 0:
         sys.exit(0)
     else:
         pass
 
-def main():
+def main(life):
     if life > 30:
-        show_life()
+        show_life(life)
     elif life <= 30 and life > 0:
-        show_life()
-        print_low_life()
+        show_life(life)
+        print_low_life(life)
     else:
         print("You died!")
-        end_game()
+        end_game(life)

@@ -16,6 +16,6 @@ def menu(full_name, bag):
         print("".join([k + " : " + str(v) + "  " ]))
     menu_choice = input("choose where do you want to go:")
     if menu_choice == 't':
-        tavern.tavern_adventure(bag, life_module.life)
+        tavern.tavern_adventure()
     if menu_choice == 'w':
         woods.woods_adventure(bag, life)

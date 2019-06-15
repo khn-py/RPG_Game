@@ -13,7 +13,7 @@ def meet_bad_guy(bag):
     return bag
 
 
-def tavern_adventure(bag, life_module.life):
+def tavern_adventure():
     tavern_file = "tavern.txt"
     with open(tavern_file, "r") as f:
         lines = f.readlines()
