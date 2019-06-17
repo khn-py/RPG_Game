@@ -1,4 +1,2 @@
-# Nasze repo
-testy
-123
-prosta gra rpg
+# RPG Game repository
+easy RPG Game
