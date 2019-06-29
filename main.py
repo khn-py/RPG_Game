@@ -4,7 +4,6 @@ from tavern import tavern_adventure, buy_food
 from life_module import Life
 from life_module import bcolors
 
-
 menu_dict = {
     'tavern': 't',
     'the woods': 'w'
@@ -15,8 +14,7 @@ bag = {
     "gold": 1,
     "armour": 1
  }
-
-zycie = Life(40)
+zycie = Life.update(life==)
 
 def show_pasek(bag):
     Life.show_life(zycie)
@@ -35,8 +33,8 @@ def menu(full_name, bag):
         print(bag)
     if menu_choice == 'w':
         woods.woods_adventure(bag)
-        print(bag)
-
+        zycie.update(woods.life_change)
+        show_pasek(bag)
 
 
 
