@@ -1,16 +1,15 @@
-import life_module
-
-
+# import life_module
+#
+#
 def buy_food(bag):
     bag["gold"] -= 1
-    life_module.life += 1
-    return bag, life_module.life
-
-
-def meet_bad_guy(bag):
-    bag["armour"] += 1
-    bag["gold"] += 1
     return bag
+#
+#
+# def meet_bad_guy(bag):
+#     bag["armour"] += 1
+#     bag["gold"] += 1
+#     return bag
 
 
 def tavern_adventure():
@@ -30,12 +29,16 @@ def tavern_adventure():
                     print(line)
             if user_choice2 == 2:
                 print("What a pity... Bye")
-            buy_food(bag, life_module.life)
+                buy_food(bag)
+                # life += 1
+            # buy_food(bag, life_module.life)
             return True
         elif user_choice == 2:
             for line in lines[4:7]:
                 print(line)
-                meet_bad_guy(bag)
+                bag["armour"] += 1
+                bag["gold"] += 1
+                # meet_bad_guy(bag)
             return True
         else:
             print("Choose again.")

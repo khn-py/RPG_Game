@@ -1,17 +1,21 @@
 import generator_imienia as gi
 import woods
-import main_menu as mm
+import menu as mm
 #dodać wszystkie moduły, usunąć moduły z modułów, dodać atrybuty funkcji w modułach
 
 
+# class Bag:
+#     def __init__(self, food, gold, armour):
+#         self.food = 5
+#         self.gold = 5
+#         self
 
 
-
-bag = {
-    "food": 1,
-    "gold": 1,
-    "armour": 1
-}
+# bag = {
+#     "food": 1,
+#     "gold": 1,
+#     "armour": 1
+# }
 
 
 

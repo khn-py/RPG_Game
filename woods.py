@@ -23,9 +23,11 @@ def show_woods_story(full_name):
     print("1. Pick the berries to get 1 food")
     print("2. Fight with wolfs to get more 2 foods.")
 
+
 def open_woods():
     with open('woods.txt', 'r') as fopen:
         lines = fopen.readlines()
+
 
 def woods_adventure(bag, life):
     phrase = int(input("Write 1 or 2: "))
