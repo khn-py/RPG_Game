@@ -3,8 +3,6 @@
 
 import random
 
-life_change = 0
-
 def pick_berries(bag):
     bag["food"] += 1
     return bag
@@ -13,16 +11,18 @@ def pick_berries(bag):
 def win_with_wolf(bag):
     bag["food"] += 2
     life_change = -12
+    print('cvcv')
     return bag, life_change
 
 
 def lose_with_wolves(bag):
     bag["food"] += 0
     life_change = -100
+    print('cvmmcv')
     return bag, life_change
 
 
-def woods_adventure(bag ):
+def woods_adventure(bag):
     print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods.")
     phrase = int(input("Write 1 or 2: "))
     with open('woods.txt', 'r') as fopen:
@@ -39,10 +39,11 @@ def woods_adventure(bag ):
                 return win_with_wolf(bag)
             elif fight_result1 == "lose":
                 print(lines[8])
-                lose_with_wolves(bag)
                 return lose_with_wolves(bag)
         if fight_or_run == 2:
             print(lines[5])
+        bag = pick_berries(bag)
+        return bag, 0
     elif phrase == 2:
         print(lines[6])
         print(lines[7])
@@ -60,3 +61,5 @@ def woods_adventure(bag ):
             print(lines[5])
     else:
         print("This is not what i expected! Choose 1 or 2")
+
+    return bag, 0
