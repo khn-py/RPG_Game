@@ -39,6 +39,14 @@ class Life:
         else:
             pass
 
+    def update(self, change):
+        self.life = self.life + change
+        if self.life > 100:
+            self.life = 100
+        if self.life < 0:
+            self.life = 0
+            self.end_game()
+
 
     def print_low_life(self):
         """printing if you have less than 3 life"""
@@ -68,7 +76,9 @@ class Life:
 
 
 # if __name__ == '__main__':
-#zycie = Life(40)
+#     zycie = Life(40)
+#     print(zycie)
+#     zycie.update(-50)
 #     print(zycie)
 #     print("odpaliłeś jako głowny moduł")
 # else:

@@ -1,6 +1,9 @@
 # import generator_imienia
 # import life_module
+
 import random
+
+life_change = 0
 
 def pick_berries(bag):
     bag["food"] += 1
@@ -9,16 +12,17 @@ def pick_berries(bag):
 
 def win_with_wolf(bag):
     bag["food"] += 2
-    # life_module.life -= 10
-    return bag
+    life_change = -12
+    return bag, life_change
 
 
 def lose_with_wolves(bag):
     bag["food"] += 0
-    return bag
+    life_change = -100
+    return bag, life_change
 
 
-def woods_adventure(bag):
+def woods_adventure(bag ):
     print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods.")
     phrase = int(input("Write 1 or 2: "))
     with open('woods.txt', 'r') as fopen:
