@@ -32,9 +32,9 @@ def menu(full_name, bag):
     menu_choice = input("choose where do you want to go:")
     if menu_choice == 't':
         tavern_adventure(bag)
-        print (bag)
+        sp.show_pasek(bag)
     if menu_choice == 'w':
-        woods.woods_adventure(bag, life)
+        woods.woods_adventure(bag)
 
 
 
@@ -50,12 +50,8 @@ def main():
     full_name = gi.generate_characters_name()
     life = 100
 
-
     print(full_name)
     menu(full_name, bag)
-
-
-
 
 
 if __name__ == "__main__":

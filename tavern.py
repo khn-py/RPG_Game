@@ -36,9 +36,9 @@ def tavern_adventure(bag):
         elif user_choice == 2:
             for line in lines[4:7]:
                 print(line)
-                bag["armour"] += 1
-                bag["gold"] += 1
-                #meet_bad_guy(bag)
+            #bag["armour"] += 1
+            #bag["gold"] += 1
+            meet_bad_guy(bag)
             return True
         else:
             print("Choose again.")
