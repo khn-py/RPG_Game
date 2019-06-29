@@ -32,10 +32,9 @@ def menu(full_name, bag):
     menu_choice = input("choose where do you want to go:")
     if menu_choice == 't':
         tavern_adventure(bag)
-        print (bag)
+        print(bag)
     if menu_choice == 'w':
         woods.woods_adventure(bag)
-
         print(bag)
 
 

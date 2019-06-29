@@ -19,8 +19,7 @@ def lose_with_wolves(bag):
 
 
 def woods_adventure(bag):
-    print("1. Pick the berries to get 1 food")
-    print("2. Fight with wolves to get more 2 foods.")
+    print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods.")
     phrase = int(input("Write 1 or 2: "))
     with open('woods.txt', 'r') as fopen:
         lines = fopen.readlines()
@@ -36,17 +35,24 @@ def woods_adventure(bag):
                 return win_with_wolf(bag)
             elif fight_result1 == "lose":
                 print(lines[8])
-                pick_berries(bag)
-                return pick_berries(bag)
+                lose_with_wolves(bag)
+                return lose_with_wolves(bag)
         if fight_or_run == 2:
             print(lines[5])
     elif phrase == 2:
-        fight_result = random.choice(["win", "lose"])
-        if fight_result == "win":
-            print(lines[7])
-            return win_with_wolf(bag)
-        elif fight_result == "lose":
-            print(lines[8])
-            return lose_with_wolves(bag)
+        print(lines[6])
+        print(lines[7])
+        hunt_or_run = int(input("Do you want to fight (1) or run (2)?"))
+        if hunt_or_run == 1:
+            fight_result = random.choice(["win", "lose"])
+            if fight_result == "win":
+                print(lines[8])
+                return win_with_wolf(bag)
+            elif fight_result == "lose":
+                for line in lines[9:11]:
+                    print(line)
+                return lose_with_wolves(bag)
+        if hunt_or_run == 2:
+            print(lines[5])
     else:
         print("This is not what i expected! Choose 1 or 2")
