@@ -7,10 +7,10 @@ def buy_food(bag):
     return bag
 #
 #
-# def meet_bad_guy(bag):
-#     bag["armour"] += 1
-#     bag["gold"] += 1
-#     return bag
+def meet_bad_guy(bag):
+    bag["armour"] += 1
+    bag["gold"] += 1
+    return bag
 
 
 def tavern_adventure(bag):
@@ -30,19 +30,15 @@ def tavern_adventure(bag):
                     print(line)
             if user_choice2 == 2:
                 print("What a pity... Bye")
-                #bag["gold"] -= 1
             buy_food(bag)
             return True
         elif user_choice == 2:
             for line in lines[4:7]:
                 print(line)
-                bag["armour"] += 1
-                bag["gold"] += 1
-                #meet_bad_guy(bag)
+            meet_bad_guy(bag)
             return True
         else:
             print("Choose again.")
             user_choice = int(input("What do you want to do? 1 - buy food, 2 - ADVENTURE"))
-
 
 
