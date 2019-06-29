@@ -48,6 +48,5 @@ def woods_adventure(bag):
         elif fight_result == "lose":
             print(lines[8])
             return lose_with_wolves(bag)
-
     else:
         print("This is not what i expected! Choose 1 or 2")
