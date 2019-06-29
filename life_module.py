@@ -15,6 +15,7 @@ class bcolors:
 #bcolors.(np)Header + ... + bcolors.ENDC
 
 
+
 class Life:
 
     def __init__(self, life):

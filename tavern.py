@@ -3,17 +3,17 @@ import life_module
 
 def buy_food(bag):
     bag["gold"] -= 1
-    life_module.life += 1
-    return bag, life_module.life
-
-
+    #life_module.life += 1
+    return bag
+#
+#
 def meet_bad_guy(bag):
     bag["armour"] += 1
     bag["gold"] += 1
     return bag
 
 
-def tavern_adventure():
+def tavern_adventure(bag):
     tavern_file = "tavern.txt"
     with open(tavern_file, "r") as f:
         lines = f.readlines()
@@ -30,16 +30,15 @@ def tavern_adventure():
                     print(line)
             if user_choice2 == 2:
                 print("What a pity... Bye")
-            buy_food(bag, life_module.life)
+            buy_food(bag)
             return True
         elif user_choice == 2:
             for line in lines[4:7]:
                 print(line)
-                meet_bad_guy(bag)
+            meet_bad_guy(bag)
             return True
         else:
             print("Choose again.")
             user_choice = int(input("What do you want to do? 1 - buy food, 2 - ADVENTURE"))
-
 
 
