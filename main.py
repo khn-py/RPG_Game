@@ -34,7 +34,8 @@ def menu(full_name, bag):
         tavern_adventure(bag)
         print (bag)
     if menu_choice == 'w':
-        woods.woods_adventure(bag, life)
+        woods.woods_adventure(bag)
+        print(bag)
 
 
 
