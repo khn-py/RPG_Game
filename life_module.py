@@ -1,5 +1,5 @@
 #import???
-import bcolors
+#import bcolors
 import sys
 import math
 
@@ -67,9 +67,9 @@ class Life:
         return " "
 
 
-if __name__ == '__main__':
-    zycie = Life(40)
-    print(zycie)
-    print("odpaliłeś jako głowny moduł")
-else:
-    print("odpaliłeś moduł")
+# if __name__ == '__main__':
+#zycie = Life(40)
+#     print(zycie)
+#     print("odpaliłeś jako głowny moduł")
+# else:
+#     print("odpaliłeś moduł")
