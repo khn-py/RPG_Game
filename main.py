@@ -16,7 +16,7 @@ bag = {
     "armour": 1
  }
 
-zycie = Life(40)
+zycie = Life(80)
 
 def show_pasek(bag):
     Life.show_life(zycie)
@@ -24,18 +24,18 @@ def show_pasek(bag):
     print('\n')
 
 
-def menu(full_name, bag):
+def menu(full_name, bag, zycie):
     print("Welcome in our game, " + full_name + " ! This is your bag:")
     show_pasek(bag)
     for k, v in menu_dict.items():
         print("".join([k + " : " + str(v) + "  "]))
     menu_choice = input("choose where do you want to go:")
     if menu_choice == 't':
-        tavern_adventure(bag)
-        print(bag)
+        tavern_adventure(bag, zycie)
+        show_pasek(bag)
     if menu_choice == 'w':
-        woods.woods_adventure(bag)
-        print(bag)
+        woods.woods_adventure(bag, zycie)
+        show_pasek(bag)
 
 
 
@@ -54,7 +54,7 @@ def main():
 
 
     print(full_name)
-    menu(full_name, bag)
+    menu(full_name, bag, zycie)
 
 
 

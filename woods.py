@@ -9,7 +9,6 @@ def pick_berries(bag):
 
 def win_with_wolf(bag):
     bag["food"] += 2
-    # life_module.life -= 10
     return bag
 
 

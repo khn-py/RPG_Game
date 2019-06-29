@@ -5,8 +5,8 @@ def buy_food(bag):
     bag["gold"] -= 1
     #life_module.life += 1
     return bag
-#
-#
+
+
 def meet_bad_guy(bag):
     bag["armour"] += 1
     bag["gold"] += 1

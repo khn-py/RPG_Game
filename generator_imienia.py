@@ -41,7 +41,12 @@ def add_title(name):
 
 def generate_characters_name():
     first_letter = input("choose first letter of the name:")
-    name_length = int(input("choose length of the name:"))
+    name_length = input("choose length of the name:")
+    if name_length in ['4', '5', '6', '7', '8', '9', '10']:
+        name_length = int(name_length)
+    else:
+        name_length = input("length of the name should be a number (4-10)! choose length:")
+        name_length = int(name_length)
     gender = input("choose gender m/w/n")
     name = generate_name(first_letter, name_length, gender)
     full_name = add_title(name)
