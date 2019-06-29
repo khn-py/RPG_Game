@@ -1,6 +1,6 @@
 import generator_imienia as gi
 import woods
-from tavern import tavern_adventure, buy_food
+import tavern
 from life_module import Life
 from life_module import bcolors
 
@@ -29,8 +29,10 @@ def menu(full_name, bag):
         print("".join([k + " : " + str(v) + "  "]))
     menu_choice = input("choose where do you want to go:")
     if menu_choice == 't':
-        tavern_adventure(bag)
-        print(bag)
+        bag,life_change = tavern.tavern_adventure(bag)
+        print(life_change)
+        zycie.update(life_change)
+        show_pasek(bag)
     if menu_choice == 'w':
         bag,life_change = woods.woods_adventure(bag)
         print(life_change)
