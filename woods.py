@@ -11,14 +11,12 @@ def pick_berries(bag):
 def win_with_wolf(bag):
     bag["food"] += 2
     life_change = -12
-    print('cvcv')
     return bag, life_change
 
 
 def lose_with_wolves(bag):
     bag["food"] += 0
     life_change = -100
-    print('cvmmcv')
     return bag, life_change
 
 
