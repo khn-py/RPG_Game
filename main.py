@@ -14,7 +14,7 @@ bag = {
     "gold": 1,
     "armour": 1
  }
-zycie = Life.update(life==)
+zycie = Life(100)
 
 def show_pasek(bag):
     Life.show_life(zycie)
@@ -32,8 +32,9 @@ def menu(full_name, bag):
         tavern_adventure(bag)
         print(bag)
     if menu_choice == 'w':
-        woods.woods_adventure(bag)
-        zycie.update(woods.life_change)
+        bag,life_change = woods.woods_adventure(bag)
+        print(life_change)
+        zycie.update(life_change)
         show_pasek(bag)
 
 
