@@ -67,9 +67,12 @@ class Life:
         return " "
 
 
-if __name__ == '__main__':
-    zycie = Life(40)
-    print(zycie)
-    print("odpaliłeś jako głowny moduł")
-else:
-    print("odpaliłeś moduł")
+# if __name__ == '__main__':
+#
+#     print("odpaliłeś jako głowny moduł")
+# else:
+print('sprawdzam')
+zycie = Life(60)
+print('xxxxxx')
+print(zycie)
+print("odpaliłeś moduł life")
