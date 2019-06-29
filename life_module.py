@@ -12,9 +12,10 @@ class bcolors:
     UNDERLINE = '\033[4m'
 #bcolors.(np)Header + ... + bcolors.ENDC
 
-life = 100
+#life = 100
 
 def show_life(life):
+    life = 100
     rounded = int(math.ceil(life / 10.0))
     lost = 10 - rounded
     print('[ ' + ('▓ ' * (rounded) + ('░ ' * int(lost)) + ']' + ' ' + str(life) + '%'))
