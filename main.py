@@ -14,7 +14,8 @@ bag = {
     "gold": 1,
     "armour": 1
  }
-zycie = Life.update(life==)
+
+zycie = Life.update()
 
 def show_pasek(bag):
     Life.show_life(zycie)

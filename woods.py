@@ -43,6 +43,7 @@ def woods_adventure(bag ):
                 return lose_with_wolves(bag)
         if fight_or_run == 2:
             print(lines[5])
+
     elif phrase == 2:
         print(lines[6])
         print(lines[7])
