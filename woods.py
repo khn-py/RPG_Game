@@ -11,26 +11,28 @@ def pick_berries(bag):
 def win_with_wolf(bag):
     bag["food"] += 2
     life_change = -12
-    print('cvcv')
     return bag, life_change
 
 
 def lose_with_wolves(bag):
     bag["food"] += 0
-    life_change = -100
-    print('cvmmcv')
+    life_change = -60
     return bag, life_change
 
+def do_nothing(bag):
+    bag["gold"] += 0
+    life_change = 0
+    return bag, life_change
 
 def woods_adventure(bag):
-    print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods.")
+    print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods. \n3.Go back to the city")
     phrase = int(input("Write 1 or 2: "))
     with open('woods.txt', 'r') as fopen:
         lines = fopen.readlines()
     if phrase == 1:
         for line in lines[0:2]:
             print(line)
-        fight_or_run = int(input("Do you want to fight (1) or run (2)?"))
+        fight_or_run = int(input("Do you want to fight (1), run (2)"))
         if fight_or_run == 1:
             fight_result1 = random.choice(["win", "lose"])
             if fight_result1 == "win":
@@ -38,10 +40,12 @@ def woods_adventure(bag):
                     print(line)
                 return win_with_wolf(bag)
             elif fight_result1 == "lose":
-                print(lines[8])
+                print(lines[9])
                 return lose_with_wolves(bag)
         if fight_or_run == 2:
             print(lines[5])
+        if fight_or_run == 3:
+            do_nothing(bag)
         bag = pick_berries(bag)
         return bag, 0
     elif phrase == 2:
@@ -59,6 +63,9 @@ def woods_adventure(bag):
                 return lose_with_wolves(bag)
         if hunt_or_run == 2:
             print(lines[5])
+    elif phrase == 3:
+        print("ok")
+        return do_nothing(bag)
     else:
         print("This is not what i expected! Choose 1 or 2")
 
