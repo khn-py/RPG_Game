@@ -1,5 +1,3 @@
-#import???
-#import bcolors
 import sys
 import math
 
@@ -13,7 +11,6 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 #bcolors.(np)Header + ... + bcolors.ENDC
-
 
 
 class Life:
@@ -45,8 +42,8 @@ class Life:
             self.life = 100
         if self.life < 0:
             self.life = 0
+            print("You died........... Thank you, next :)")
             self.end_game()
-
 
     def print_low_life(self):
         """printing if you have less than 3 life"""
@@ -58,7 +55,7 @@ class Life:
     def end_game(self):
         """if you have no life: printing youre dead"""
         if self.life <= 0:
-            print("You're dead :(")
+            print("Your game has finished because of 0% Life, try again by opening game again")
             sys.exit(0)
         else:
             pass
