@@ -9,6 +9,7 @@ def pay_healing(bag):
     return bag, life_change
 
 def fight_the_priest(bag):
+    print("You bastard! Attacking the priest is a shame! S H A M E\n You get 5 gold and your life gets -25")
     bag["gold"] += 5
     life_change = - 25
     return bag, life_change
