@@ -17,7 +17,7 @@ def win_with_wolf(bag):
 def lose_with_wolves(bag):
     bag["food"] += 0
     life_change = -60
-    return bag, life_change
+
 
 def do_nothing(bag):
     bag["gold"] += 0

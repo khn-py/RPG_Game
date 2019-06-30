@@ -1,8 +1,10 @@
+import life_module
 import random
 
 
 def buy_food(bag):
     bag["gold"] -= 1
+
     bag["food"] += 1
     life_change = 10
     return bag, life_change
@@ -88,6 +90,7 @@ def bad_guy_art():
                  LGB     `-..___..-`""")
 
 
+
 def tavern_adventure(bag):
     tavern_file = "tavern.txt"
     with open(tavern_file, 'r') as f:
@@ -117,6 +120,7 @@ def tavern_adventure(bag):
         elif user_choice == 3:
             print("ok")
             return do_nothing(bag)
+
         else:
             print("Choose again.")
             user_choice = int(input("What do you want to do? \n1 - buy food, \n2 - ADVENTURE\n"))
@@ -153,5 +157,5 @@ def cemetery_adventure(bag):
         if choice_leave == "2":
             print("You coward! You ran away so fast that you lost some gold.")
             return run_away(bag)
-
     return bag, 0
+

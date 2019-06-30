@@ -4,7 +4,6 @@ import tavern
 import church
 from life_module import Life, bcolors
 
-
 menu_dict = {
     "TAVERN": 't',
     "WOODS": 'w',
