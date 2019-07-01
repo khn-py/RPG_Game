@@ -62,7 +62,7 @@ def pray_in_church(bag):
     with open(church_file, 'r') as f:
         lines = f.readlines()
     print(lines[0])
-    user_choice = int(input("What do you want to do? \n1 - Pray for free (+5 Life) \n2 - Pay for healing (- 5 Gold, +50 Life) \n3-Fight the priest \n4-Go back to the city"))
+    user_choice = int(input("What do you want to do? \n1 - Pray for free (+5 Life) \n2 - Pay for healing (- 5 Gold, +50 Life) \n3 - Fight the priest \n4 - Go back to the city"))
     user = False
     while user is False:
         if user_choice == 1:

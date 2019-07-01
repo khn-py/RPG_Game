@@ -25,7 +25,7 @@ def do_nothing(bag):
     return bag, life_change
 
 def woods_adventure(bag):
-    print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods. \n3.Go back to the city")
+    print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods. \n3. Go back to the city")
     phrase = int(input("Write 1 or 2: "))
     with open('woods.txt', 'r') as fopen:
         lines = fopen.readlines()
