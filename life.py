@@ -1,7 +1,8 @@
-import sys
 import math
+import sys
 
-class bcolors:
+
+class Bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
@@ -23,15 +24,15 @@ class Life:
         rounded = int(math.ceil(self.life / 10.0))
         lost = 10 - rounded
         if self.life >= 70:
-            battery = (bcolors.OKGREEN + '[ ' + ('▓ ' * (rounded) + bcolors.ENDC + ('░ ' * int(lost)) + ']' + ' ' + str(self.life) + '%'))
+            battery = (Bcolors.OKGREEN + '[ ' + ('▓ ' * (rounded) + Bcolors.ENDC + ('░ ' * int(lost)) + ']' + ' ' + str(self.life) + '%'))
             print(battery)
 
         elif self.life <= 30:
-            battery = (bcolors.FAIL +'[ ' + ('▓ ' * (rounded) + bcolors.ENDC + ('░ ' * int(lost)) + ']' + ' ' + str(self.life) + '%'))
+            battery = (Bcolors.FAIL +'[ ' + ('▓ ' * (rounded) + Bcolors.ENDC + ('░ ' * int(lost)) + ']' + ' ' + str(self.life) + '%'))
             print(battery)
 
         elif self.life >30 and self.life <70:
-            battery = (bcolors.WARNING +'[ ' + ('▓ ' * (rounded) + bcolors.ENDC + ('░ ' * int(lost)) + ']' + ' ' + str(self.life) + '%'))
+            battery = (Bcolors.WARNING +'[ ' + ('▓ ' * (rounded) + Bcolors.ENDC + ('░ ' * int(lost)) + ']' + ' ' + str(self.life) + '%'))
             print(battery)
         else:
             pass

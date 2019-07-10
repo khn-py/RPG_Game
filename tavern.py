@@ -1,4 +1,4 @@
-import life_module
+import life
 import random
 
 
@@ -151,8 +151,8 @@ def cemetery_adventure(bag):
                 print("You won")
                 return win_with_ghost(bag)
             else:
-                print(
-                    "The ghost appears to be the Lady With 99 Ghost-Cats And A Parrot. They eat you alive. You're dead.")
+                ghost_art()
+                print("The ghost appears to be the Lady With 99 Ghost-Cats And A Parrot. They eat you alive. You're dead.")
                 return lose_with_ghost(bag)
         if choice_leave == "2":
             print("You coward! You ran away so fast that you lost some gold.")

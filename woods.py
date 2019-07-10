@@ -1,7 +1,5 @@
-# import generator_imienia
-# import life_module
-
 import random
+
 
 def pick_berries(bag):
     bag["food"] += 1
@@ -23,6 +21,7 @@ def do_nothing(bag):
     bag["gold"] += 0
     life_change = 0
     return bag, life_change
+
 
 def woods_adventure(bag):
     print("1. Pick the berries to get 1 food \n2. Fight with wolves to get more 2 foods. \n3. Go back to the city")
