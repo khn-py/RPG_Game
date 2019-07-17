@@ -1,6 +1,6 @@
 # SimpleRPG Game
 Simple RPG Game created with python 3.7
-*Python 3.7 
+
 
 This is the final project for CODE:ME Python Course made by: Helena Mieszak, Natalia Ordecka and Katarzyna Kasprzak.
 We wanted to create our first RPG game where user can choose his name and decide where to go and what actions he want to do.
@@ -9,7 +9,9 @@ Instalation
 
 You need to use python 3.7 and pycharm
 1.Download repository
+
 2.Open file 'main.py' in cmd or run main.py on pycharm
+
 3.cmd wont run the special effects from game
 
 How to play
